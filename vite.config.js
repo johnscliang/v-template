@@ -13,5 +13,8 @@ export default defineConfig({
   base: './', // 打包路径
   server: {
     port: 4330
+  },
+  build: {
+    outDir: 'insh'
   }
 })
