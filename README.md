@@ -24,3 +24,8 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - [ ] 埋点
 - [ ] 可回溯
 - [ ] 权限管理？
+
+# Reference
+
+> [commitlint]https://commitlint.js.org/#/reference-rules
+> 
