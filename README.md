@@ -20,3 +20,6 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - [ ] 代码混淆
 - [ ] 全局常量定义（常量，错误码等）
 - [ ] 测试环境打包上传脚本（node.js）
+- [ ] 埋点
+- [ ] 可回溯
+- [ ] 权限管理？
