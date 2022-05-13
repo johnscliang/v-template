@@ -18,6 +18,7 @@ module.exports = {
   ],
   rules: {
     'semi': [2, 'never'],
+    'import/no-unresolved': 'off',
     'vue/no-multiple-template-root': 'off',
     'comma-dangle': 'off',
     'no-undef': 'off'
