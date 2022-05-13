@@ -2,7 +2,7 @@ const fs = require("fs");
 const filesize = require("filesize");
 const files = process.argv.slice(2);
 
-const SIZE_LIMIT = 5 * 1024;
+const SIZE_LIMIT = 500 * 1024;
 const filesOverLimit = [];
 
 for (const file of files) {
