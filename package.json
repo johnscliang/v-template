@@ -8,10 +8,12 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "lint": "eslint ./src --ext .vue,.js,.ts",
-    "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts"
+    "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts",
+    "lint:css": "stylelint ./src/**/*.{vue,css,scss}"
   },
   "lint-staged": {
     "src/**/*.{vue,js,ts}": "eslint",
+    "*.{html,vue,css,sass,scss}": "stylelint",
     "*": [
       "node ./tools/check-files-size.js"
     ]
