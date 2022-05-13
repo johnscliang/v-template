@@ -10,10 +10,17 @@ export default defineConfig({
       '@': resolve(__dirname, 'src') // `@` --> `src`
     }
   },
-  base: './', // 打包路径
   server: {
     port: 4330
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "@/style/common.scss";@import "@/style/foo.scss";'
+      }
+    }
+  },
+  base: './', // 打包路径
   build: {
     outDir: 'dist'
   }

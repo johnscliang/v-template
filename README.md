@@ -11,6 +11,8 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - [x] vite
 - [x] eslint
 - [x] commitlint + lint-staged + husky
+- [ ] scss
+- [ ] stylelint
 - [ ] vue router
 - [ ] vuex
 - [ ] axios
@@ -28,4 +30,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 # Reference
 
 > [commitlint]https://commitlint.js.org/#/reference-rules
-> 
+> [stylelint]https://stylelint.io/user-guide/get-started
