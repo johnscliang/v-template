@@ -11,7 +11,8 @@
     "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts"
   },
   "lint-staged": {
-    "src/**/*.{vue,js,ts}": "eslint"
+    "src/**/*.{vue,js,ts}": "eslint",
+    "*": ["node ./tools/check-files-size.js"]
   },
   "dependencies": {
     "@commitlint/cli": "^16.2.4",
