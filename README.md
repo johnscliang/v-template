@@ -29,5 +29,6 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 # Reference
 
-> [commitlint]https://commitlint.js.org/#/reference-rules
-> [stylelint]https://stylelint.io/user-guide/get-started
+- [eslint] https://eslint.org/docs/rules/
+- [commitlint] https://commitlint.js.org/#/reference-rules
+- [stylelint] https://stylelint.io/user-guide/get-started
