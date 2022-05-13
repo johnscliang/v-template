@@ -7,18 +7,18 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
 # Target
-- [ ] vue3
-- [ ] vite2.9
+- [x] vue
+- [x] vite
+- [x] eslint
+- [x] commitlint + lint-staged + husky
 - [ ] vue router
 - [ ] vuex
-- [ ] Typescript
-- [ ] tslint
 - [ ] axios
+- [ ] mock.js
 - [ ] jest
 - [ ] 全局token机制
 - [ ] 微信jssdk
 - [ ] 虚拟openid
-- [ ] 代码混淆
 - [ ] 全局常量定义（常量，错误码等）
 - [ ] 测试环境打包上传脚本（node.js）
 - [ ] 埋点
