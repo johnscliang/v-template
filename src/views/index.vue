@@ -19,6 +19,6 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="scss">
-.aa{}
+<style scoped>
+
 </style>
