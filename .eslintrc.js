@@ -14,6 +14,7 @@ module.exports = {
   },
   plugins: [
     'vue',
+    'html',
     '@typescript-eslint',
     'import',
     'promise',
