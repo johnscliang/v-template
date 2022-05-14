@@ -21,10 +21,13 @@ module.exports = {
   ],
   rules: {
     'semi': [2, 'never'],
+    'no-unused-vars': 'off',
     'import/no-unresolved': 'off',
+    'import/extensions': 'off',
     'vue/no-multiple-template-root': 'off',
     'comma-dangle': 'off',
     'no-undef': 'off',
-    'vue/comment-directive': 'off'
+    'vue/comment-directive': 'off',
+    'vue/multi-word-component-names': 'off'
   },
 };

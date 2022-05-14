@@ -1,6 +1,8 @@
 <template>
   <div class="test-container page-container">
-    index
+    <div class="page-title">Unit Test Page</div>
+    <p>count is: {{ count }}</p>
+    <button @click="increment">increment</button>
   </div>
 </template>
 
@@ -8,7 +10,7 @@
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
-  name: 'Index',
+  name: 'Test',
   setup() {
     const count = ref<number>(0)
     const increment = () => {
@@ -19,5 +21,6 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.aa {}
 </style>
