@@ -12,7 +12,7 @@
     "lint:css": "stylelint ./src/**/**.{vue,css,scss}"
   },
   "lint-staged": {
-    "src/**/*.{vue,js,ts,html}": ["eslint", "htmlhint"],
+    "src/**/*.{vue,js,ts,html}": "eslint",
     "*.html": ["eslint", "htmlhint"],
     "*.{vue,css,scss}": "stylelint",
     "src/**/*.{vue,html}": "htmlhint",
