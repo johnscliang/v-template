@@ -9,7 +9,7 @@
     "prepare": "husky install",
     "lint": "eslint ./src --ext .vue,.js,.ts,.html",
     "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts,.html",
-    "lint:css": "stylelint ./src/**/**.{vue,css,scss}"
+    "lint:css": "stylelint ./src/**/*.{vue,css,scss}"
   },
   "lint-staged": {
     "src/**/*.{vue,js,ts,html}": "eslint",
