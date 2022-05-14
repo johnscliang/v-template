@@ -13,7 +13,7 @@
     "lint:css": "stylelint ./src/**/**.{vue,css,scss}"
   },
   "lint-staged": {
-    "*.html src/**/*.{vue,js,ts,html}": "eslint",
+    "/**/*.{vue,js,ts,html}": "eslint",
     "*.{vue,css,sass,scss}": "stylelint",
     "*": [
       "node ./tools/check-files-size.js"
