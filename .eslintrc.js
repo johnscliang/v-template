@@ -15,6 +15,8 @@ module.exports = {
   plugins: [
     'vue',
     '@typescript-eslint',
+    'import',
+    'promise',
   ],
   rules: {
     'semi': [2, 'never'],
