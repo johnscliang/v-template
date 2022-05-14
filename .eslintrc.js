@@ -23,6 +23,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'vue/no-multiple-template-root': 'off',
     'comma-dangle': 'off',
-    'no-undef': 'off'
+    'no-undef': 'off',
+    'vue/comment-directive': 'off'
   },
 };
