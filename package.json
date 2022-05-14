@@ -8,13 +8,14 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "lint": "eslint ./src --ext .vue,.js,.ts,.html",
+    "lint:index": "eslint ./*.html",
     "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts",
     "lint:css": "stylelint ./src/**/**.{vue,css,scss}"
   },
   "lint-staged": {
     "src/**/*.{vue,js,ts,html}": "eslint",
-    "./*.html": "eslint",
-    "*.{html,vue,css,sass,scss}": "stylelint",
+    "*.{vue,css,sass,scss}": "stylelint",
+    "*.html": "eslint",
     "*": [
       "node ./tools/check-files-size.js"
     ]
