@@ -15,7 +15,7 @@
     "src/**/*.{vue,js,ts,html}": "eslint",
     "*.html": ["eslint", "htmlhint"],
     "*.{vue,css,scss}": "stylelint",
-    "src/**/*.{vue,html}": "htmlhint",
+    "App.vue": "htmlhint",
     "*": [
       "node ./tools/check-files-size.js"
     ]
