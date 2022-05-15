@@ -1,4 +1,4 @@
-class Client {
+class ClientInfo {
 
   public name: string
   public avatar: string
@@ -6,4 +6,4 @@ class Client {
 
 }
 
-export default Client
+export default ClientInfo
