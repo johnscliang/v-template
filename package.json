@@ -14,7 +14,9 @@
   "lint-staged": {
     "src/**/*.{vue,js,ts,html}": "eslint",
     "src/**/*.{vue,html}": "htmlhint",
-    "*.html": ["eslint"],
+    "*.html": [
+      "eslint"
+    ],
     "*.{vue,css,scss}": "stylelint",
     "*": [
       "node ./tools/check-files-size.js"
@@ -23,6 +25,7 @@
   "dependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
+    "axios": "^0.27.2",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15"
   },
@@ -31,6 +34,7 @@
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "@vitejs/plugin-vue": "^2.3.3",
+    "axios-mock-adapter": "^1.20.0",
     "eslint": "^8.15.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-html": "^6.2.0",

@@ -15,10 +15,9 @@ npm run dev
 - [x] commitlint + lint-staged + husky
 - [x] scss
 - [x] stylelint
-- [ ] vue router
+- [x] vue router
 - [ ] vuex
-- [ ] axios
-- [ ] mock.js
+- [ ] axios + axios-mock-adapter
 - [ ] jest
 - [ ] 全局token机制
 - [ ] 微信jssdk
