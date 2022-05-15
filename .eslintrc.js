@@ -28,6 +28,8 @@ module.exports = {
     'comma-dangle': 'off',
     'no-undef': 'off',
     'vue/comment-directive': 'off',
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    'padded-blocks': 'off',
+    'lines-between-class-members': 'off'
   },
 };
