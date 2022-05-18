@@ -1,8 +1,8 @@
 class ClientInfo {
 
-  public name: string
-  public avatar: string
-  public nickname: string
+  public name?: string
+  public avatar?: string
+  public nickname?: string
 
 }
 

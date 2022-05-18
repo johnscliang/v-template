@@ -1,8 +1,8 @@
 class Response<T> {
 
-  public code: number
-  public data: T
-  public message: string
+  public code?: number
+  public data?: T
+  public message?: string
 
 }
 
