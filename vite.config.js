@@ -20,7 +20,7 @@ export default defineConfig({
       }
     }
   },
-  base: './', // 打包路径
+  base: '/static/',
   build: {
     outDir: 'dist'
   }
