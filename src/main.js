@@ -14,7 +14,7 @@ let vconsole = null
 if (!import.meta.env.PROD) {
   import('vconsole').then(({ default: VConsole }) => {
     vconsole = new VConsole()
-    const snapshotPlugin = initSnapshotPlugin(VConsole.VConsolePlugin)
+    const snapshotPlugin = initSnapshotPlugin(vconsole, VConsole.VConsolePlugin)
     vconsole.addPlugin(snapshotPlugin)
   })
 }

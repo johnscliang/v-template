@@ -1,4 +1,6 @@
-export default function initSnapshotPlugin(VConsolePlugin) {
+import html2canvas from "html2canvas";
+
+export default function initSnapshotPlugin(vconsole, VConsolePlugin) {
   let plugin = new VConsolePlugin('snapshot', 'Snapshot');
   plugin.on('renderTab', function(callback) {
     let html = `
@@ -16,6 +18,10 @@ export default function initSnapshotPlugin(VConsolePlugin) {
   plugin.on('ready', function() {
     document.querySelector('#vconsole_bt_snapshot').addEventListener('click', function() {
       console.log('开始截图');
+      vconsole.hide();
+      html2canvas(document.querySelector("html")).then(canvas => {
+        console.log(canvas.toDataURL('image/jpg', 1));
+      });
     });
   });
   return plugin;
