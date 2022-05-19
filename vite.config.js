@@ -23,5 +23,6 @@ export default defineConfig({
   base: '/static/',
   build: {
     outDir: 'dist'
-  }
+  },
+  envDir: 'config'
 })

@@ -6,7 +6,6 @@ npm run dev
 
 # Visual Studio Code - Plugins
 - Volar
-- 
 
 # Target
 - [x] vue

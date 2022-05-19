@@ -5,3 +5,5 @@ import router from '@/router/index.router'
 const app = createApp(App)
 app.use(router)
 app.mount('#app')
+
+console.log('----env----', import.meta.env)
