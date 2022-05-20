@@ -21,6 +21,7 @@ export default function initSnapshotPlugin(vconsole, VConsolePlugin) {
       vconsole.hide();
       html2canvas(document.querySelector("html")).then(canvas => {
         console.log(canvas.toDataURL('image/jpg', 1));
+        // alert('发送成功!');
       });
     });
   });
