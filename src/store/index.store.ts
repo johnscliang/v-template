@@ -15,10 +15,13 @@ export const store = createStore<BaseData>({
       return state.pageData
     }
   },
-  mutations: {},
+  mutations: {
+    SET_PAGE_DATA(state, payload) {
+      state.pageData = payload
+    }
+  },
   actions: {},
-  modules: {
-  }
+  modules: {}
 })
 
 export function useStore() {

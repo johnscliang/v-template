@@ -30,6 +30,7 @@ module.exports = {
     'vue/comment-directive': 'off',
     'vue/multi-word-component-names': 'off',
     'padded-blocks': 'off',
-    'lines-between-class-members': 'off'
+    'lines-between-class-members': 'off',
+    'no-param-reassign': 'off'
   },
 };
