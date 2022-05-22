@@ -1,6 +1,6 @@
 interface BaseResp<T> {
 
-  code?: number
+  code: number
   data?: T[]
   message?: string
 
