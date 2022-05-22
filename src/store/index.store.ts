@@ -10,11 +10,7 @@ export const store = createStore<BaseData>({
       pageData: null
     }
   },
-  getters: {
-    getPageData(state, getters) {
-      return state.pageData
-    }
-  },
+  getters: {},
   mutations: {
     SET_PAGE_DATA(state, payload) {
       state.pageData = payload
