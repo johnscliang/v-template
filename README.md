@@ -15,7 +15,7 @@ npm run dev
 - [x] scss
 - [x] stylelint
 - [x] vue router
-- [ ] vuex
+- [x] vuex
 - [ ] axios + axios-mock-adapter
 - [ ] jest
 - [ ] 全局token机制
