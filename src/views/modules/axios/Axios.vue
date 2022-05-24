@@ -1,6 +1,6 @@
 <template>
   <div class="page-container">
-    <div>target:</div>
+    <div @click="test()">target:</div>
     <div>axios</div>
     <div>age</div>
   </div>
@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, Ref } from 'vue'
+import clientAPI from '@/api/clientAPI'
 // import axios from '../utils/axios'
 
 export default defineComponent({
@@ -22,6 +23,13 @@ export default defineComponent({
 
     return {
       getUserInfo
+    }
+  },
+  methods: {
+    test() {
+      clientAPI.login({}).catch((err) => {
+        // console.log(err)
+      })
     }
   }
 })

@@ -7,7 +7,7 @@ export const key: InjectionKey<Store<BaseData>> = Symbol('vuex-baseData')
 export const store = createStore<BaseData>({
   state() {
     return {
-      pageData: null
+      pageData: 'aaaaPagedata'
     }
   },
   getters: {},

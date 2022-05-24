@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useStore } from '@/store/index.store'
+import { store } from '@/store/index.store'
 
 const instance = axios.create({
   baseURL: 'https://some-domain.com/api/',
@@ -8,16 +8,11 @@ const instance = axios.create({
 })
 
 // 请求拦截器
-instance.interceptors.request.use((config) => {
-  const store = useStore()
-  return config
-}, (error) => Promise.reject(error))
+instance.interceptors.request.use((config) => config, (error) => Promise.reject(error))
 
 // 响应拦截器
 instance.interceptors.response.use((response) => {
   const res = response.data
-  // 处理权限问题等
-  const store = useStore()
   //   store.state.pageData =
   return response
 }, (error) => Promise.reject(error))
