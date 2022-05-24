@@ -31,6 +31,8 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'padded-blocks': 'off',
     'lines-between-class-members': 'off',
-    'no-param-reassign': 'off'
+    'no-param-reassign': 'off',
+    'quotes': 'off',
+    'object-shorthand': 'off'
   },
 };

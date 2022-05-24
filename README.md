@@ -16,7 +16,8 @@ npm run dev
 - [x] stylelint
 - [x] vue router
 - [x] vuex
-- [ ] axios + axios-mock-adapter
+- [x] axios
+- [ ] axios-mock-adapter
 - [ ] jest
 - [ ] 全局token机制
 - [ ] 微信jssdk
@@ -28,6 +29,7 @@ npm run dev
 - [ ] 权限管理？
 - [ ] 阻止返回键
 - [ ] 全局登录弹窗
+- [ ] IDV组件-用video截图
 
 # Reference
 

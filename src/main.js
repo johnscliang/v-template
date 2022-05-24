@@ -8,6 +8,7 @@ const app = createApp(App)
 app.use(router)
 app.mount('#app')
 
+/* eslint-disable no-console */
 console.log('----env----', import.meta.env)
 
 // 动态加载vconsole
