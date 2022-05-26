@@ -1,5 +1,6 @@
 import axios from "axios"
 import { store } from '@/store/index.store'
+import MockEngine from '../mock/mockEngine'
 
 const instance = axios.create({
   baseURL: 'https://some-domain.com/api/',
@@ -17,6 +18,10 @@ instance.interceptors.response.use((response) => {
   return response
 }, (error) => Promise.reject(error))
 
+if (import.meta.env.MODE === 'mock') {
+  const mockAdapter = new MockEngine(instance)
+}
+
 export default class BaseAPI {
 
   static get(uri: string, params: any) {
@@ -27,19 +32,19 @@ export default class BaseAPI {
     })
   }
 
-  static post(uri: string, params: any) {
-    return instance({
-      method: 'POST',
-      url: uri,
-      params: params
-    })
-  }
-
-  static postJson(uri: string, data: any) {
+  static post(uri: string, data: any) {
     return instance({
       method: 'POST',
       url: uri,
       data
+    })
+  }
+
+  static postForm(uri: string, params: any) {
+    return instance({
+      method: 'POST',
+      url: uri,
+      params: params
     })
   }
 

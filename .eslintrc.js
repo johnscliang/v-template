@@ -33,6 +33,11 @@ module.exports = {
     'lines-between-class-members': 'off',
     'no-param-reassign': 'off',
     'quotes': 'off',
-    'object-shorthand': 'off'
+    'object-shorthand': 'off',
+    'no-shadow': 'off',
+    'func-names': 'off',
+    'no-async-promise-executor': 'off',
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off'
   },
 };

@@ -1,8 +1,8 @@
 <template>
   <div class="page-container">
-    <div @click="test()">target:</div>
-    <div>axios</div>
-    <div>age</div>
+    <button @click="login()">登录</button>
+    <br/>
+    <button @click="getClientInfo()">获取信息</button>
   </div>
 </template>
 
@@ -26,9 +26,16 @@ export default defineComponent({
     }
   },
   methods: {
-    test() {
-      clientAPI.login({}).catch((err) => {
+    login() {
+      clientAPI.login({ username: 'john' }).then((resp) => {
+        // console.log(resp.data)
+      }).catch((err) => {
         // console.log(err)
+      })
+    },
+    getClientInfo() {
+      clientAPI.getClientInfo({}).then(({ data }) => {
+        // console.log(data)
       })
     }
   }
