@@ -5,9 +5,13 @@ import { METHOD } from './mockConfig'
 
 export default class MockEngine {
 
-  private mockAdapter: MockAdapter
+  private static mockAdapter: MockAdapter
 
-  constructor(axiosInstance: AxiosInstance) {
+  public static getAdapter() {
+    return this.mockAdapter
+  }
+
+  public static start(axiosInstance: AxiosInstance) {
     this.mockAdapter = new MockAdapter(axiosInstance)
     // console.log('mock config', MockConfigList)
     MockConfigList.forEach((mockConfig) => {
@@ -25,10 +29,6 @@ export default class MockEngine {
         })
       }
     })
-  }
-
-  getMockAdapter() {
-    return this.mockAdapter
   }
 
 }

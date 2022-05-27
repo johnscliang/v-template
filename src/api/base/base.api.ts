@@ -19,7 +19,7 @@ instance.interceptors.response.use((response) => {
 }, (error) => Promise.reject(error))
 
 if (import.meta.env.MODE === 'mock') {
-  const mockAdapter = new MockEngine(instance)
+  MockEngine.start(instance)
 }
 
 export default class BaseAPI {

@@ -7,6 +7,9 @@ npm run dev
 # Visual Studio Code - Plugins
 - Volar
 
+# VS Code config
+- setting -> tab size = 2
+
 # Target
 - [x] vue
 - [x] vite
