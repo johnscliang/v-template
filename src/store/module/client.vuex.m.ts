@@ -1,6 +1,6 @@
 import { Module } from 'vuex'
-import ClientInfo from '@/common/types/clientInfo.model'
-import BaseData from '@/common/types/base/IbaseData'
+import ClientInfo from '@/common/beans/clientInfo.model'
+import BaseData from '@/common/beans/base/IbaseData'
 
 const clientModule: Module<ClientInfo, BaseData> = {
   namespaced: true,

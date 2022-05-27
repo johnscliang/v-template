@@ -4,7 +4,7 @@ import {
   Router,
   RouteRecordRaw
 } from 'vue-router'
-import Index from '@/views/Index.vue'
+import Index from '@/views/HomePage.vue'
 import Axios from '@/views/modules/axios/Axios.vue'
 
 const routes: Array<RouteRecordRaw> = [

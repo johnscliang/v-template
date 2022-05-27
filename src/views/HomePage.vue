@@ -8,7 +8,7 @@
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
-  name: 'Index',
+  name: 'HomePage',
   setup() {
     const count = ref<number>(0)
     const increment = () => {

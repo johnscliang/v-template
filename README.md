@@ -18,11 +18,10 @@ npm run dev
 - [x] vuex
 - [x] axios
 - [x] axios-mock-adapter
-- [ ] jest
+- [x] 全局常量定义（常量，错误码等）
 - [ ] 全局token机制
 - [ ] 微信jssdk
 - [ ] 虚拟openid
-- [ ] 全局常量定义（常量，错误码等）
 - [ ] 测试环境打包上传脚本（node.js）
 - [ ] 埋点
 - [ ] 可回溯

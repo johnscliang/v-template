@@ -1,6 +1,6 @@
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
-import BaseData from '@/common/types/base/IbaseData'
+import BaseData from '@/common/beans/base/IbaseData'
 
 export const key: InjectionKey<Store<BaseData>> = Symbol('vuex-baseData')
 
