@@ -17,7 +17,7 @@ npm run dev
 - [x] vue router
 - [x] vuex
 - [x] axios
-- [ ] axios-mock-adapter
+- [x] axios-mock-adapter
 - [ ] jest
 - [ ] 全局token机制
 - [ ] 微信jssdk
