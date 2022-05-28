@@ -5,7 +5,6 @@ const clientAPIMock2: Array<MockConfig> = [
     url: '/client/info',
     method: METHOD.GET,
     statusCode: 200,
-    params: {},
     mode: 'male',
     getJsonPath() {
       let path

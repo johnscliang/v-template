@@ -5,7 +5,6 @@ const clientAPIMock: Array<MockConfig> = [
     url: '/login',
     method: METHOD.POST,
     statusCode: 200,
-    params: { username: 'john' },
     mode: 'fail',
     getJsonPath() {
       let path
