@@ -28,14 +28,14 @@ export default defineComponent({
   methods: {
     login() {
       clientAPI.login({ username: 'john' }).then((resp) => {
-        // console.log(resp.data)
+        console.log(resp.data)
       }).catch((err) => {
         // console.log(err)
       })
     },
     getClientInfo() {
       clientAPI.getClientInfo({}).then(({ data }) => {
-        // console.log(data)
+        console.log(data)
       })
     }
   }

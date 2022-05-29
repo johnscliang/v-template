@@ -12,7 +12,7 @@ export default class MockEngine {
   }
 
   public static async start(axiosInstance: AxiosInstance) {
-    this.mockAdapter = new MockAdapter(axiosInstance, { onNoMatch: "throwException", delayResponse: 500 })
+    this.mockAdapter = new MockAdapter(axiosInstance, { onNoMatch: "throwException", delayResponse: 100 })
     const mockConfigList = (await MockConfigList)
     // console.log('mock config', mockConfigList)
     mockConfigList.forEach((mockConfig) => {
