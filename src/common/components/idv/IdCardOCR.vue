@@ -2,6 +2,8 @@
     <div>
         <button @click="init()">开始</button>
         <video id="video" autoplay/>
+        <img id="screenshot"/>
+        <button @click="screenShot()">截图</button>
     </div>
 </template>
 <script lang="ts">
@@ -19,7 +21,7 @@ export default defineComponent({
   methods: {
     init() {
       const promise = navigator.mediaDevices.getUserMedia({
-        video: {}
+        video: true
       })
       console.log('promise')
       const video: any = document.querySelector('#video')
@@ -27,6 +29,19 @@ export default defineComponent({
         video.srcObject = stream
         video.play()
       })
+    },
+    screenShot() {
+      const video: any = document.querySelector('#video')
+      const canvas = document.createElement('canvas')
+      const ctx: any = canvas.getContext('2d')
+      canvas.width = video.videoWidth
+      canvas.height = video.videoHeight
+      ctx.drawImage(video, 0, 0)
+      //
+      const base64 = canvas.toDataURL('image/png')
+      console.log(base64)
+      const img: any = document.querySelector('#screenshot')
+      img.src = canvas.toDataURL('image/png')
     }
   }
 })
@@ -34,6 +49,9 @@ export default defineComponent({
 <style scoped lang="scss">
 #video {
   width: 100%;
-  height: 500px;
+}
+
+#screenshot {
+  width: 100%;
 }
 </style>

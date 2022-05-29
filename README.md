@@ -22,6 +22,7 @@ npm run dev
 - [x] axios
 - [x] axios-mock-adapter
 - [x] 全局常量定义（常量，错误码等）
+- [ ] IDV组件-用video截图
 - [ ] 全局token机制
 - [ ] 微信jssdk
 - [ ] 虚拟openid
@@ -31,7 +32,6 @@ npm run dev
 - [ ] 权限管理？
 - [ ] 阻止返回键
 - [ ] 全局登录弹窗
-- [ ] IDV组件-用video截图
 
 # Reference
 
