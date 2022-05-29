@@ -20,7 +20,7 @@ export default defineConfig({
       }
     }
   },
-  base: '/static/',
+  base: '/',
   build: {
     outDir: 'dist'
   },

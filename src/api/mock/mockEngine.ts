@@ -11,20 +11,24 @@ export default class MockEngine {
     return this.mockAdapter
   }
 
-  public static start(axiosInstance: AxiosInstance) {
+  public static async start(axiosInstance: AxiosInstance) {
     this.mockAdapter = new MockAdapter(axiosInstance, { onNoMatch: "throwException", delayResponse: 500 })
-    // console.log('mock config', MockConfigList)
-    MockConfigList.forEach((mockConfig) => {
+    const mockConfigList = (await MockConfigList)
+    // console.log('mock config', mockConfigList)
+    mockConfigList.forEach((mockConfig) => {
+      const jsonPath = `./modules/${mockConfig.getJsonPath()}`
       if (mockConfig.method === METHOD.GET) {
-        this.mockAdapter.onGet(mockConfig.url).reply((config?) => {
+        this.mockAdapter.onGet(mockConfig.url).reply((config) => {
           return new Promise(async function (resolve, reject) {
-            resolve([mockConfig.statusCode, (await import(`./modules/${mockConfig.getJsonPath()}`)).default])
+            const json = (await import(/* @vite-ignore */jsonPath)).default as JSON
+            resolve([mockConfig.statusCode, json])
           })
         })
       } else if (mockConfig.method === METHOD.POST) {
         this.mockAdapter.onPost(mockConfig.url).reply((config) => {
           return new Promise(async function (resolve, reject) {
-            resolve([mockConfig.statusCode, (await import(`./modules/${mockConfig.getJsonPath()}`)).default])
+            const json = (await import(/* @vite-ignore */jsonPath)).default as JSON
+            resolve([mockConfig.statusCode, json])
           })
         })
       }

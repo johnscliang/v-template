@@ -1,7 +1,13 @@
+import MockConfig from './mockConfig'
 import addAll from './mockUtils'
 
-export default await addAll(
-  // client mock
-  (await import('./modules/client/clientAPI.mock')).default,
-  (await import('./modules/client/clientAPI2.mock')).default,
-)
+async function addAllWrap() : Promise<MockConfig[]> {
+  return addAll(
+    ...[
+      (await import('./modules/client/clientAPI.mock')).default,
+      (await import('./modules/client/clientAPI2.mock')).default
+    ]
+  )
+}
+
+export default addAllWrap()
