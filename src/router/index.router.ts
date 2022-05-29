@@ -7,6 +7,7 @@ import {
 import HomePage from '@/views/HomePage.vue'
 import Axios from '@/views/modules/axios/Axios.vue'
 import IdCardOCR from '@/common/components/idv/IdCardOCR.vue'
+import IdvComponent from '@/common/components/idv/IdvComponent.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -25,9 +26,16 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/modules/test/Test.vue')
   },
   {
-    path: '/common/idcard_ocr',
+    path: '/common',
     name: 'Common',
-    component: IdCardOCR
+    component: IdvComponent,
+    children: [
+      {
+        path: 'idv',
+        name: 'IdCardOCR',
+        component: IdCardOCR
+      }
+    ]
   }
 ]
 
