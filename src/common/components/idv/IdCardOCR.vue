@@ -19,10 +19,7 @@ export default defineComponent({
   methods: {
     init() {
       const promise = navigator.mediaDevices.getUserMedia({
-        video: {
-          width: 400,
-          height: 680
-        }
+        video: {}
       })
       console.log('promise')
       const video: any = document.querySelector('#video')
