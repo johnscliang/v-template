@@ -12,7 +12,7 @@ export default class MockEngine {
   }
 
   public static start(axiosInstance: AxiosInstance) {
-    this.mockAdapter = new MockAdapter(axiosInstance)
+    this.mockAdapter = new MockAdapter(axiosInstance, { onNoMatch: "throwException", delayResponse: 500 })
     // console.log('mock config', MockConfigList)
     MockConfigList.forEach((mockConfig) => {
       if (mockConfig.method === METHOD.GET) {
