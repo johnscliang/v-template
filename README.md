@@ -22,7 +22,7 @@ npm run dev
 - [x] axios
 - [x] axios-mock-adapter
 - [x] 全局常量定义（常量，错误码等）
-- [ ] IDV组件-用video截图
+- [x] IDV组件-用video截图
 - [ ] 全局token机制
 - [ ] 微信jssdk
 - [ ] 虚拟openid
