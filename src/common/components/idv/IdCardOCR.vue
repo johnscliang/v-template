@@ -1,6 +1,7 @@
 <template>
     <div>
-        <video id="video" width="680px" height="400px" autoplay/>
+        <button @click="init()">开始</button>
+        <video id="video" autoplay/>
     </div>
 </template>
 <script lang="ts">
@@ -23,17 +24,19 @@ export default defineComponent({
           height: 680
         }
       })
-      const video = document.querySelector('#video')
+      console.log('promise')
+      const video: any = document.querySelector('#video')
       promise.then(function (stream) {
-        // video.obj
+        video.srcObject = stream
+        video.play()
       })
     }
-  },
-  onMounted() {
-    this.init()
   }
 })
 </script>
 <style scoped lang="scss">
-
+#video {
+  width: 100%;
+  height: 500px;
+}
 </style>
