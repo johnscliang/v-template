@@ -20,15 +20,13 @@ export default class MockEngine {
       if (mockConfig.method === METHOD.GET) {
         this.mockAdapter.onGet(mockConfig.url).reply((config) => {
           return new Promise(async function (resolve, reject) {
-            const json = (await import(/* @vite-ignore */jsonPath)).default as JSON
-            resolve([mockConfig.statusCode, json])
+            resolve([mockConfig.statusCode, (await mockConfig.getJsonPath()).default])
           })
         })
       } else if (mockConfig.method === METHOD.POST) {
         this.mockAdapter.onPost(mockConfig.url).reply((config) => {
           return new Promise(async function (resolve, reject) {
-            const json = (await import(/* @vite-ignore */jsonPath)).default as JSON
-            resolve([mockConfig.statusCode, json])
+            resolve([mockConfig.statusCode, (await mockConfig.getJsonPath()).default])
           })
         })
       }

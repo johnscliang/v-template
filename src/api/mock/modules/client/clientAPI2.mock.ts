@@ -7,18 +7,14 @@ const clientAPIMock2: Array<MockConfig> = [
     statusCode: 200,
     mode: 'male',
     getJsonPath() {
-      let path
       switch (this.mode) {
         case 'male':
-          path = '/client/json/clientInfo.json'
-          break
+          return import('./json/clientInfo.json')
         case 'female':
-          path = 'client/json/clientInfo2.json'
-          break
+          return import('./json/clientInfo2.json')
         default:
-          break
+          return import('./json/clientInfo.json')
       }
-      return path
     }
   }
 ]

@@ -7,19 +7,14 @@ const clientAPIMock: Array<MockConfig> = [
     statusCode: 200,
     mode: 'fail',
     getJsonPath() {
-      let path
       switch (this.mode) {
         case 'success':
-          path = '/client/json/login.json'
-          break
+          return import('./json/login.json')
         case 'fail':
-          path = 'client/json/loginFail.json'
-          break
+          return import('./json/loginFail.json')
         default:
-
-          break
+          return import('./json/login.json')
       }
-      return path
     }
   }
 ]
