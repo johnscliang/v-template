@@ -8,7 +8,7 @@ type MockConfig = {
   readonly method: METHOD
   readonly statusCode: number
   readonly mode: any
-  getJsonPath: Function
+  getJsonPath(): Promise<any>
 }
 
 export default MockConfig
