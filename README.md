@@ -1,3 +1,6 @@
+# v-template
+Vue3 template
+
 # quick start
 ```
 npm install 
@@ -10,7 +13,7 @@ npm run dev
 # VS Code config
 - setting -> tab size = 2
 
-# Target
+# TODO
 - [x] vue
 - [x] vite
 - [x] eslint
