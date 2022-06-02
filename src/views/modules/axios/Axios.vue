@@ -1,8 +1,13 @@
 <template>
   <div class="page-container">
+    <div style="text-align: center; width: 100%;">
+      <img src="@/assets/logo.png"/>
+    </div>
     <button @click="login()">登录</button>
     <br/>
     <button @click="getClientInfo()">获取信息</button>
+    <br/>
+    <VanButton>VantButton</VanButton>
   </div>
 </template>
 

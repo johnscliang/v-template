@@ -5,11 +5,15 @@ import { key, store } from '@/store/index.store'
 //
 import initSnapshotPlugin from '../tools/snapshot.vconsole.plugin'
 import initHelperPlugin from '../tools/helper.vconsole.plugin'
+import vantImport from '@/utils/vantImport'
 
 const app = createApp(App)
 app.use(router)
 // TODO 需要this.$store有类型声明的话参考关键词：ComponentCustomProperties
 app.use(store, key)
+// 按需引入vant组件
+vantImport(app)
+//
 app.mount('#app')
 
 /* eslint-disable no-console */
