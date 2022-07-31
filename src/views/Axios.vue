@@ -7,44 +7,40 @@
     <br/>
     <button @click="getClientInfo()">获取信息</button>
     <br/>
-    <VanButton>VantButton</VanButton>
+    <VanButton @click="showLoading">showLoading</VanButton>
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent, ref, Ref } from 'vue'
 import clientAPI from '@/api/clientAPI'
-// import axios from '../utils/axios'
+import { loading } from '@/utils/tools'
 
-export default defineComponent({
-  name: 'Axios',
-  setup() {
-    const userInfo: Ref = ref(null)
-    const loading = ref(false)
+const login = () => {
+  loading.show()
+  clientAPI.login({ username: 'john' }).then((resp) => {
+    console.log(resp.data)
+    loading.hide()
+  }).catch((err) => {
+    // console.log(err)
+  })
+}
 
-    const getUserInfo = () => {
-      loading.value = true
-    }
+const getClientInfo = () => {
+  loading.show()
+  clientAPI.getClientInfo({}).then(({ data }) => {
+    console.log(data)
+    loading.hide()
+  })
+}
 
-    return {
-      getUserInfo
-    }
-  },
-  methods: {
-    login() {
-      clientAPI.login({ username: 'john' }).then((resp) => {
-        console.log(resp.data)
-      }).catch((err) => {
-        // console.log(err)
-      })
-    },
-    getClientInfo() {
-      clientAPI.getClientInfo({}).then(({ data }) => {
-        console.log(data)
-      })
-    }
-  }
-})
+const showLoading = () => {
+  loading.show()
+  setTimeout(() => {
+    loading.hide()
+  }, 3000)
+}
+
 </script>
 
 <style scoped lang="scss">

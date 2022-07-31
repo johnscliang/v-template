@@ -6,6 +6,8 @@ A pure frontend template built with
 - husky + commitlint
 - axios + axios-adapter
 - VConsole(with custom plugin)
+- Custom components: loading
+- Custom components: dialog （api模仿微信小程序）
 
 compile with vue-tsc  
 

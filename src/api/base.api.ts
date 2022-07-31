@@ -21,7 +21,7 @@ instance.interceptors.response.use((response) => {
 let mockAdapter: any = null
 let mockConfigSet: Set<string> | null = null
 if (import.meta.env.MODE === 'mock') {
-  mockAdapter = new MockAdapter(instance, { onNoMatch: "throwException", delayResponse: 100 })
+  mockAdapter = new MockAdapter(instance, { onNoMatch: "throwException", delayResponse: 800 })
   mockConfigSet = new Set<string>()
 }
 

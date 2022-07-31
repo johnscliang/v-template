@@ -40,6 +40,7 @@ module.exports = {
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
     'no-console': 'off',
-    'prefer-const': 'off'
+    'prefer-const': 'off',
+    'import/prefer-default-export': 'off'
   },
 };
