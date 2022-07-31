@@ -35,14 +35,14 @@ export default class BaseAPI {
     if (mockAdapter && !mockConfigSet.has(this.getMockConfigSetKey(apiConfig.url, method))) {
       mockConfigSet.add(this.getMockConfigSetKey(apiConfig.url, method))
       if (method === 'GET') {
-        mockAdapter.onGet(apiConfig.url).replay((config: any) => {
+        mockAdapter.onGet(apiConfig.url).reply((config: any) => {
           return new Promise(async function (resolve, reject) {
             resolve([apiConfig.statusCode, (await apiConfig.getJsonPath()).default])
           })
         })
       }
       if (method === 'POST') {
-        mockAdapter.onPost(apiConfig.url).replay((config: any) => {
+        mockAdapter.onPost(apiConfig.url).reply((config: any) => {
           return new Promise(async function (resolve, reject) {
             resolve([apiConfig.statusCode, (await apiConfig.getJsonPath()).default])
           })
