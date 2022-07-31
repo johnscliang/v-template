@@ -11,7 +11,7 @@ import { defineComponent, ref } from 'vue'
 
 // https://developer.mozilla.org/zh-CN/docs/Web/API/MediaDevices/getUserMedia
 export default defineComponent({
-  name: 'IdCardOCR',
+  name: 'Media',
   setup() {
     const count = ref<number>(0)
     const increment = () => {

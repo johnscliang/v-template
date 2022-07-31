@@ -5,9 +5,8 @@ import {
   RouteRecordRaw
 } from 'vue-router'
 import HomePage from '@/views/HomePage.vue'
-import Axios from '@/views/modules/axios/Axios.vue'
-import IdCardOCR from '@/common/components/idv/IdCardOCR.vue'
-import IdvComponent from '@/common/components/idv/IdvComponent.vue'
+import Axios from '@/views/Axios.vue'
+import MediaComponent from '@/views/Media.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -23,19 +22,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/test',
     name: 'Test',
-    component: () => import('@/views/modules/test/Test.vue')
+    component: () => import('@/views/Test.vue')
   },
   {
-    path: '/common',
-    name: 'Common',
-    component: IdvComponent,
-    children: [
-      {
-        path: 'idv',
-        name: 'IdCardOCR',
-        component: IdCardOCR
-      }
-    ]
+    path: '/media',
+    name: 'Media',
+    component: MediaComponent
   }
 ]
 

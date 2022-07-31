@@ -1,22 +1,30 @@
 <template>
-  <div class="test-container page-container">
-    index
+  <div class="page-container">
+    <van-collapse v-model="activeName" accordion>
+      <van-collapse-item title="axios" name="1">
+        <router-link to="/axios">
+        axios & axios-adapter
+        </router-link>
+      </van-collapse-item>
+      <van-collapse-item title="getUserMedia" name="2">
+        <router-link to="/media">
+        getUserMedia test
+        </router-link>
+      </van-collapse-item>
+      <van-collapse-item title="others" name="3">
+        <router-link to="/test">
+        other test
+        </router-link>
+      </van-collapse-item>
+    </van-collapse>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script lang="ts" setup>
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: 'HomePage',
-  setup() {
-    const count = ref<number>(0)
-    const increment = () => {
-      count.value += 1
-    }
-    return { count, increment }
-  }
-})
+const activeName = ref('1')
+
 </script>
 
 <style scoped>
