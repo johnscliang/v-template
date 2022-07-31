@@ -38,6 +38,8 @@ module.exports = {
     'func-names': 'off',
     'no-async-promise-executor': 'off',
     'arrow-body-style': 'off',
-    'prefer-arrow-callback': 'off'
+    'prefer-arrow-callback': 'off',
+    'no-console': 'off',
+    'prefer-const': 'off'
   },
 };

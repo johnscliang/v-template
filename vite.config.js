@@ -27,9 +27,9 @@ export default defineConfig({
       }
     }
   },
-  base: '/',
+  base: '/vtemplate/',
   build: {
-    outDir: 'dist'
+    outDir: 'vtemplate'
   },
   envDir: 'config'
 })

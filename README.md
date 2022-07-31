@@ -1,40 +1,24 @@
 # v-template
-Vue3 template
+A pure frontend template built with 
+- Vue3 + vuex + Vite3 + Vant3
+- sass
+- eslint + stylelint + htmlhint
+- husky + commitlint
+- axios + axios-adapter
 
-# quick start
+compile with vue-tsc  
+
+Easygoing for redevelopment
+
+# Quick start
 ```
 npm install 
 npm run dev
+
+visit below on your browser
+http://localhost:4330/vtemplate/#/index
+
 ```
-
-# Visual Studio Code - Plugins
-- Volar
-
-# VS Code config
-- setting -> tab size = 2
-
-# TODO
-- [x] vue
-- [x] vite
-- [x] eslint
-- [x] commitlint + lint-staged + husky
-- [x] scss
-- [x] stylelint
-- [x] vue router
-- [x] vuex
-- [x] axios
-- [x] axios-mock-adapter
-- [x] 全局常量定义（常量，错误码等）
-- [x] IDV组件-用video截图
-- [ ] 全局token机制
-- [ ] 微信jssdk
-- [ ] 虚拟openid
-- [ ] 测试环境打包上传脚本（node.js）
-- [ ] 埋点
-- [ ] 可回溯
-- [ ] 权限管理？
-- [ ] 阻止返回键
-- [ ] 全局登录弹窗
 
 # Reference
 
