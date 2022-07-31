@@ -5,6 +5,7 @@ A pure frontend template built with
 - eslint + stylelint + htmlhint
 - husky + commitlint
 - axios + axios-adapter
+- VConsole(with custom plugin)
 
 compile with vue-tsc  
 
