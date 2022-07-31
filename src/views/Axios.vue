@@ -8,13 +8,14 @@
     <button @click="getClientInfo()">获取信息</button>
     <br/>
     <VanButton @click="showLoading">showLoading</VanButton>
+    <VanButton @click="testModal">showModal</VanButton>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { defineComponent, ref, Ref } from 'vue'
 import clientAPI from '@/api/clientAPI'
-import { loading } from '@/utils/tools'
+import { loading, showModal } from '@/utils/tools'
 
 const login = () => {
   loading.show()
@@ -39,6 +40,13 @@ const showLoading = () => {
   setTimeout(() => {
     loading.hide()
   }, 3000)
+}
+
+const testModal = () => {
+  showModal({
+    content: '测试内容',
+    // showCancel: false
+  })
 }
 
 </script>

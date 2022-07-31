@@ -41,6 +41,7 @@ module.exports = {
     'prefer-arrow-callback': 'off',
     'no-console': 'off',
     'prefer-const': 'off',
-    'import/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
+    'no-unneeded-ternary': 'off'
   },
 };
